@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Programador</title>
+    <meta name="description" content="Portafolio de Lautaro Eberhardt - Backend Developer.">
+    <title>Portfolio Lautaro Eberhardt</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2350c878%22 font-family=%22sans-serif%22 font-weight=%22bold%22>L</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 </head>
 
 <body>
 
     <header class="navbar">
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
         <nav>
             <ul class="nav-links">
@@ -28,7 +36,7 @@
 
     <section id="inicio" class="hero-section">
     
-    <div class="hero-content">
+    <div class="hero-content" data-aos="fade-right">
         <h1>Hola, soy <span class="highlight">Lautaro Eberhardt</span></h1>
         <h2>Técnico Superior en Desarrollo de Software</h2>
         <p><span class="highlight">Backend Developer</span> | Sólidas aptitudes en <span class="highlight">Python y SQL</span></p>
@@ -49,13 +57,13 @@
         </div>
     </div>
     
-    <div class="image-container">
+    <div class="image-container" data-aos="fade-left">
         <img src="foto mia fondo gris.jpeg" alt="Foto de perfil" class="profile-pic">
     </div>
     
     </section>
 
-    <section id="sobre-mi" class="section-placeholder">
+    <section id="sobre-mi" class="section-placeholder" data-aos="fade-up">
         <div>
             <h2>Sobre Mí</h2>
                 <p>Soy Lautaro Eberhardt tengo 22 años y soy técnico superior en desarrollo de software.</p>
@@ -85,11 +93,11 @@
     </section>
 
     <section id="proyectos" class="section-placeholder">
-        <h2>Proyectos</h2>
+        <h2 data-aos="fade-up">Proyectos</h2>
         
         <div class="project-grid">
 
-            <div class="project-card">
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
                 <h3>Sistema Gestión de Panaderia</h3>
                 <p>Automatización y control de pedidos de una panadería, historial de pedidos y control de stock para mejorar la eficiencia y gestión.
                     Frontend hecho con Flet .
@@ -107,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
                 <h3>Sistema de alquiler de vehiculos</h3>
                 <p>Sistema para la gestión de alquiler de vehículos, reservas y control de pagos.</p>
                 
@@ -126,38 +134,38 @@
     </section>
     
     <section id="contacto" class="section-placeholder">
-        <h2>Contacto</h2>
-        <p>Estoy disponible para proyectos, colaboraciones y nuevas oportunidades. No dudes en contactarme.</p>
+        <h2 data-aos="fade-up">Contacto</h2>
+        <p data-aos="fade-up">Estoy disponible para proyectos, colaboraciones y nuevas oportunidades. No dudes en contactarme.</p>
         
         <div class="contact-grid">
 
-            <div class="contact-card copy-card" data-copy="lautaroeberhardt8@gmail.com" >
+            <div class="contact-card copy-card" data-copy="lautaroeberhardt8@gmail.com" data-aos="flip-left" data-aos-delay="100">
                 <i class="fa-solid fa-envelope" title="Correo Electrónico"></i>
                 <h4>Correo Electrónico</h4>
                 <p>lautaroeberhardt8@gmail.com</p>
                 <span class="copy-feedback"></span>
             </div>
 
-            <div data-copy="+03496512097" class="contact-card copy-card">
+            <div data-copy="+03496512097" class="contact-card copy-card" data-aos="flip-left" data-aos-delay="200">
                 <i class="fa-solid fa-phone" title="Teléfono"></i>
                 <h4>Teléfono</h4>
                 <p>+03496512097</p>
                 <span class="copy-feedback"></span>
             </div>
 
-            <div class="contact-card">
+            <div class="contact-card" data-aos="flip-left" data-aos-delay="300">
                 <i class="fa-solid fa-location-dot" title="Ubicación"></i>
                 <h4>Ubicación</h4>
                 <p>Santa Fe, Argentina</p>
             </div>
 
-            <a href="https://github.com/LautaroEberhardt" target="_blank" class="contact-card social-link">
+            <a href="https://github.com/LautaroEberhardt" target="_blank" class="contact-card social-link" data-aos="flip-left" data-aos-delay="400">
                 <i class="fa-brands fa-github" title="GitHub"></i>
                 <h4>GitHub</h4>
                 <p>LautaroEberhardt</p>
             </a>
 
-            <a href="https://www.linkedin.com/in/lautaro-eberhardt-015574337/" target="_blank" class="contact-card social-link">
+            <a href="https://www.linkedin.com/in/lautaro-eberhardt-015574337/" target="_blank" class="contact-card social-link" data-aos="flip-left" data-aos-delay="500">
                 <i class="fa-brands fa-linkedin" title="LinkedIn"></i>
                 <h4>LinkedIn</h4>
                 <p>Lautaro Eberhardt</p>
@@ -180,6 +188,13 @@
             <img class="modal-content" id="modal-image" src="" alt="Vista previa del proyecto">
         </div>
 
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        </script>
         <script src="script.js"></script>
 
 </body>

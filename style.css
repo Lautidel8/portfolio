@@ -4,7 +4,7 @@
    ========================================= */
 :root {
     /* Color de fondo principal (Oscuro) */
-    --bg-color: #102b09; 
+    --bg-color: #071404;
     
     /* Color de fondo secundario (Header, tarjetas) */
     --bg-secondary: #092B13;
@@ -13,7 +13,7 @@
     --text-main: #f8fafc;
 
     /* Color del texto secundario (párrafos más suaves) */
-    --text-muted: #616161;
+    --text-muted: #78797C;
 
     /* Color de Acento (Botones, enlaces, bordes de foto) */
     /* Prueba cambiarlo a: #10b981 (Verde), #ef4444 (Rojo), #f59e0b (Naranja) */
@@ -513,4 +513,114 @@ footer {
 
 .redes-sociales .copyright {
     margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (MÓVIL)
+   ========================================= */
+
+/* Botón de menú (Hamburguesa) - Oculto por defecto */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+    
+    /* --- HEADER / NAV --- */
+    .navbar {
+        padding: 1rem 5%;
+        justify-content: space-between; /* Separa menú y botón CV */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar botón en móvil */
+        z-index: 1001;
+    }
+
+    /* Menú de navegación (Lista de enlaces) */
+    .nav-links {
+        position: absolute;
+        top: 100%; /* Justo debajo del header */
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-secondary); /* Fondo del menú desplegable */
+        flex-direction: column; /* Enlaces verticales */
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        
+        /* Oculto por defecto */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s ease;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Clase para mostrar el menú (se añade con JS) */
+    .nav-links.active {
+        max-height: 500px; /* Altura suficiente para el contenido */
+        opacity: 1;
+    }
+
+    /* Botón de CV en el header */
+    .btn-header {
+        display: none; /* Ocultar botón CV en header móvil para simplificar */
+    }
+
+    /* --- HERO SECTION --- */
+    .hero-section {
+        flex-direction: column-reverse; /* Imagen arriba, texto abajo */
+        text-align: center;
+        padding-top: 2rem;
+        justify-content: center;
+        min-height: auto; /* Quitar altura mínima fija */
+    }
+
+    .image-container {
+        margin-bottom: 2rem;
+        padding-left: 0;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        justify-content: center; /* Centrar botones */
+    }
+
+    .tech-icons {
+        justify-content: center; /* Centrar iconos */
+    }
+
+    /* --- SECCIONES GENERALES --- */
+    .section-placeholder {
+        padding: 0 5%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajuste modal */
+    .modal-content {
+        max-width: 90vw;
+    }
 }

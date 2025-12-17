@@ -13,6 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const transitionDuration = 400; // Debe coincidir con el 0.4s del CSS
 
+    // =========================================
+    // 1.1 MENÚ RESPONSIVE
+    // =========================================
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
     
     // =========================================
     // 2. FUNCIONES DEL MODAL (OPEN/CLOSE)
