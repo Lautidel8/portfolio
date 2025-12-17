@@ -1,34 +1,30 @@
-/* =========================================
-   VARIABLES GLOBALES (CONFIGURACIÓN)
-   Modifica los colores aquí y cambiarán en toda la web
-   ========================================= */
+
+/*VARIABLES GLOBALES*/
+
 :root {
-    /* Color de fondo principal (Oscuro) */
+    /* Color de fondo principal */
     --bg-color: #071404;
     
-    /* Color de fondo secundario (Header, tarjetas) */
+    /* Color de fondo secundario */
     --bg-secondary: #092B13;
 
     /* Color del texto principal */
     --text-main: #f8fafc;
 
-    /* Color del texto secundario (párrafos más suaves) */
+    /* Color del texto secundario */
     --text-muted: #78797C;
 
-    /* Color de Acento (Botones, enlaces, bordes de foto) */
-    /* Prueba cambiarlo a: #10b981 (Verde), #ef4444 (Rojo), #f59e0b (Naranja) */
+    /* Color de destacado */
     --accent-color: #91F79C; 
 
     /* Color del texto sobre el color del cursor */
     --text-on-accent: #ffffff;
     
-    /* Fuente tipográfica */
+    /* Fuente*/
     --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* =========================================
-   RESET Y ESTILOS BASE
-   ========================================= */
+/*RESET Y ESTILOS BASE*/
 * {
     margin: 0;
     padding: 0;
@@ -36,14 +32,13 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
-    scrollbar-width: thin; /* Para Firefox */
-    scrollbar-color: var(--accent-color) var(--bg-color); /* Para Firefox */
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--bg-color);
 }
 
-/* =========================================
-   SCROLLBAR PERSONALIZADO (Chrome, Edge, Safari)
-   ========================================= */
+/* SCROLLBAR PERSONALIZADO */
+
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -55,16 +50,16 @@ html {
 ::-webkit-scrollbar-thumb {
     background-color: var(--accent-color);
     border-radius: 6px;
-    border: 3px solid var(--bg-color); /* Crea un efecto de margen */
+    border: 3px solid var(--bg-color); 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #7ae585; /* Un tono ligeramente diferente al hacer hover */
+    background-color: #7ae585; 
 }
 
 /* Corrección para que el header no tape el inicio de la sección */
 section[id] {
-    scroll-margin-top: 100px; /* Ajusta este valor si necesitas más o menos espacio */
+    scroll-margin-top: 100px; 
 }
 
 body {
@@ -85,9 +80,8 @@ ul {
     list-style: none;
 }
 
-/* =========================================
-   HEADER / NAV
-   ========================================= */
+/* HEADER / NAV */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -121,16 +115,14 @@ ul {
     color: var(--accent-color);
 }
 
-/* =========================================
-   SECCIÓN HERO (PRINCIPAL)
-   ========================================= */
+/* SECCIÓN HERO */
 .hero-section {
     min-height: 75vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 70px 2% 60px 2%;
-    width: 90%; /* Ajusta el ancho para que siempre haya espacio a los lados */
+    width: 90%; 
     margin: 0 auto;
 }
 
@@ -139,14 +131,14 @@ ul {
     padding-left: 10px;
 }
 
-/* Estilo de la Imagen Central */
+
 .profile-pic {
-    width: 300px;        /* Tamaño de la imagen */
+    width: 300px;
     height: 300px;
-    object-fit: cover;   /* Asegura que la foto no se deforme */
-    border-radius: 50%;  /* La hace redonda */
-    border: 4px solid var(--accent-color); /* Borde con tu color de acento */
-    box-shadow: 0 0 10px var(--accent-color); /* Resplandor suave */
+    object-fit: cover;  
+    border-radius: 50%;  
+    border: 4px solid var(--accent-color); 
+    box-shadow: 0 0 10px var(--accent-color);
 }
 
 .hero-content h1 {
@@ -170,7 +162,7 @@ ul {
     color: var(--accent-color);
 }
 
-/* Botones */
+
 .cta-buttons {
     margin-top: 2rem;
     display: flex;
@@ -183,10 +175,10 @@ ul {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    border: none; /* Quita bordes por defecto en buttons */
-    font-family: inherit; /* Hereda la fuente de la web */
-    font-size: 1rem; /* Asegura mismo tamaño de texto */
-    display: inline-flex; /* Mejor control de alineación */
+    border: none; 
+    font-family: inherit; 
+    font-size: 1rem; 
+    display: inline-flex; 
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -206,7 +198,7 @@ ul {
 .btn.secondary {
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
-    background-color: transparent; /* Fondo transparente explícito */
+    background-color: transparent;
 }
 
 .btn.secondary:hover {
@@ -219,16 +211,14 @@ ul {
     font-size: 0.9rem;
 }
 
-/* =========================================
-   SECCIÓN HERO (PRINCIPAL) - NUEVOS ESTILOS
-   ========================================= */
+/* SECCIÓN HERO (PRINCIPAL) - NUEVOS ESTILOS */
 
-/* Estilos para los iconos de tecnologías */
+
 .tech-icons {
-    margin-top: 1.5rem; /* Espacio superior */
-    margin-bottom: 2rem; /* Espacio inferior antes del párrafo */
+    margin-top: 1.5rem;
+    margin-bottom: 2rem; 
     display: flex;
-    gap: 1.5rem; /* Espacio entre iconos */
+    gap: 1.5rem; 
 }
 
 .hero-content .tech-icons i {
@@ -263,16 +253,13 @@ ul {
 }
 
 
-/* =========================================
-   SECCIONES DE RELLENO (Estilo genérico)
-   ========================================= */
+/* SECCIONES DE RELLENO */
 .section-placeholder {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem; 
     min-height: 500px;
-    border-bottom: 1px solid var(--bg-secondary);
 }
 
 .section-placeholder p {
@@ -286,13 +273,9 @@ ul {
     font-size: 2rem;
 }
 
-/* =========================================
-   SECCIÓN PROYECTOS
-   ========================================= */
+/* SECCIÓN PROYECTOS */
 .project-grid {
     display: grid;
-    /* Crea dos columnas por defecto. Si el espacio es menor a 300px,
-       el navegador las hace responsivas (una sola columna). */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 2rem;
     margin-top: 2rem;
@@ -302,19 +285,17 @@ ul {
     background-color: var(--bg-secondary);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid transparent; /* Borde inicial transparente */
+    border: 1px solid transparent;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Flexbox para asegurar que el botón siempre esté abajo */
     display: flex; 
     flex-direction: column;
 }
 
 .project-card:hover {
     border-color: var(--accent-color);
-    /* Sombra con el color de acento */
     box-shadow: 0 6px 15px var(--accent-color); 
-    transform: translateY(-5px); /* Pequeño efecto 3D al pasar el ratón */
+    transform: translateY(-5px);
 }
 
 .project-card h3 {
@@ -326,102 +307,92 @@ ul {
 .project-card p {
     color: var(--text-main);
     font-size: 1rem;
-    flex-grow: 1; /* Asegura que todas las tarjetas tengan la misma altura visual */
+    flex-grow: 1;
     margin-bottom: 1rem;
 }
 
-/* Reajuste del tamaño de los iconos en las tarjetas */
 .project-card .card-icons {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
 
 .project-card .card-icons i {
-    font-size: 2.5rem; /* Iconos un poco más pequeños que en la sección Hero */
+    font-size: 2.5rem; 
     color: var(--text-muted);
 }
 
 .project-card .card-icons span {
-    color: var(--accent-color); /* Color del texto */
-    font-size: 0.9rem;        /* Tamaño de fuente */
-    font-weight: 600;         /* Grosor de la letra */
-    display: flex;            /* Para poder alinear verticalmente */
-    align-items: center;      /* Centrar verticalmente con los iconos */
+    color: var(--accent-color); 
+    font-size: 0.9rem;        
+    font-weight: 600;         
+    display: flex;           
+    align-items: center;     
 }
 
 .project-card .btn.secondary {
-    align-self: flex-start; /* Alinea el botón a la izquierda */
+    align-self: flex-start; 
 }
     
 
-/* Nuevo contenedor para los dos botones de la tarjeta */
 .card-buttons {
-    margin-top: auto; /* Empuja los botones hacia abajo si la descripción es corta */
+    margin-top: auto; 
     padding-top: 1rem;
     display: flex;
     gap: 1rem;
     justify-content: space-between; 
 }
 
-/* Asegurar que los botones dentro de la tarjeta se estiren bien */
-.project-card .btn {
-    flex-grow: 1; /* Hace que ambos botones ocupen el mismo ancho */
-    text-align: center;
-    padding: 0.8rem 1rem; /* Ajuste ligero del padding si es necesario */
-}
-/* =========================================
-   ESTILOS DEL MODAL (Lightbox) - VERSIÓN SUAVE
-   ========================================= */
 
-/* Contenedor principal del modal: cubre toda la pantalla y está Oculto */
+.project-card .btn {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0.8rem 1rem; 
+}
+/* ESTILOS DEL MODAL*/
+
+
 .modal {
-    display: none; /* Se mantiene 'none' para quitarlo del flujo */
+    display: none; 
     position: fixed;
-    z-index: 9999; /* Asegura que esté por encima de todo */
+    z-index: 9999; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    
-    /* Configuración inicial para la transición */
-    background-color: rgba(0, 0, 0, 0); /* Empieza transparente */
-    transition: background-color 0.4s ease; /* Transición para el fondo */
+    background-color: rgba(0, 0, 0, 0); 
+    transition: background-color 0.4s ease;
     padding-top: 60px; 
-    pointer-events: none; /* Desactiva clics cuando está oculto */
+    pointer-events: none; 
 }
 
-/* Clase que se añade con JS para MOSTRAR el modal */
+
 .modal.open {
-    display: block; /* Se muestra el contenedor (primero) */
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro suave */
-    pointer-events: auto; /* Permite clics */
+    display: block; 
+    background-color: rgba(0, 0, 0, 0.9); 
+    pointer-events: auto; 
 }
 
-/* La imagen dentro del modal (tamaño y animación) */
+
 .modal-content {
     margin: auto;
     display: block;
-    
-    /* 1. TAMAÑO MÁS CHICO: Limita el tamaño de la imagen al 70% del viewport */
     width: auto;
     max-width: 70vw; 
     max-height: 70vh; 
     object-fit: contain;
-    
-    /* 2. ANIMACIÓN SUAVE: Estado inicial (oculto) */
-    opacity: 0; /* Transparente */
-    transform: scale(0.8) translateY(-20px); /* Ligeramente más pequeño y levantado */
-    transition: opacity 0.4s ease, transform 0.4s ease; /* Transición para la imagen */
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* Aplica el estilo final a la imagen cuando el modal está abierto */
+
 .modal.open .modal-content {
-    opacity: 1; /* Se vuelve visible */
-    transform: scale(1) translateY(0); /* Vuelve a su tamaño y posición normal */
+    opacity: 1; 
+    transform: scale(1) translateY(0); 
 }
 
-/* El botón de cerrar (x) */
+
 .close-btn {
     position: absolute;
     top: 15px;
@@ -440,14 +411,11 @@ ul {
     cursor: pointer;
 }
 
-/* =========================================
-   SECCIÓN CONTACTO
-   ========================================= */
+/* SECCIÓN CONTACTO */
 
-/* Reutilizamos el layout de cuadrícula responsiva */
+
 .contact-grid {
     display: grid;
-    /* Muestra 3 columnas en escritorio y se ajusta a 1 en móvil */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 1.5rem;
     margin-top: 2rem;
@@ -455,14 +423,12 @@ ul {
 }
 
 .contact-card {
-    /* Reutiliza el estilo de tarjeta base (fondo, padding) */
     background-color: var(--bg-secondary); 
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid transparent; 
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* Flexbox para centrar el contenido */
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -478,13 +444,13 @@ ul {
 
 .contact-card i {
     font-size: 2.5rem;
-    color: var(--accent-color); /* Color de acento para los iconos */
+    color: var(--accent-color); 
     margin-bottom: 0.8rem;
     transition: color 0.3s ease;
 }
 
 .contact-card:hover i {
-    color: var(--text-main); /* Cambia a blanco/claro al pasar el ratón */
+    color: var(--text-main);
 }
 
 .contact-card h4 {
@@ -498,9 +464,7 @@ ul {
     color: var(--text-muted);
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+/* FOOTER*/
 footer {
     justify-content: center;
     display: flex;
@@ -515,11 +479,8 @@ footer {
     margin: 0;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN (MÓVIL)
-   ========================================= */
+/* RESPONSIVE DESIGN*/
 
-/* Botón de menú (Hamburguesa) - Oculto por defecto */
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
@@ -529,30 +490,26 @@ footer {
 
 @media (max-width: 768px) {
     
-    /* --- HEADER / NAV --- */
     .navbar {
         padding: 1rem 5%;
-        justify-content: space-between; /* Separa menú y botón CV */
+        justify-content: space-between; 
     }
 
     .menu-toggle {
-        display: block; /* Mostrar botón en móvil */
+        display: block; 
         z-index: 1001;
     }
 
-    /* Menú de navegación (Lista de enlaces) */
     .nav-links {
         position: absolute;
-        top: 100%; /* Justo debajo del header */
+        top: 100%; 
         left: 0;
         width: 100%;
-        background-color: var(--bg-secondary); /* Fondo del menú desplegable */
-        flex-direction: column; /* Enlaces verticales */
+        background-color: var(--bg-secondary);
+        flex-direction: column; 
         align-items: center;
         padding: 2rem 0;
         gap: 1.5rem;
-        
-        /* Oculto por defecto */
         max-height: 0;
         overflow: hidden;
         opacity: 0;
@@ -560,24 +517,24 @@ footer {
         box-shadow: 0 10px 10px rgba(0,0,0,0.2);
     }
 
-    /* Clase para mostrar el menú (se añade con JS) */
+    
     .nav-links.active {
-        max-height: 500px; /* Altura suficiente para el contenido */
+        max-height: 500px;
         opacity: 1;
     }
 
-    /* Botón de CV en el header */
+    
     .btn-header {
-        display: none; /* Ocultar botón CV en header móvil para simplificar */
+        display: none; 
     }
 
-    /* --- HERO SECTION --- */
+   
     .hero-section {
-        flex-direction: column-reverse; /* Imagen arriba, texto abajo */
+        flex-direction: column-reverse; 
         text-align: center;
         padding-top: 2rem;
         justify-content: center;
-        min-height: auto; /* Quitar altura mínima fija */
+        min-height: auto; 
     }
 
     .image-container {
@@ -599,27 +556,27 @@ footer {
     }
 
     .cta-buttons {
-        justify-content: center; /* Centrar botones */
+        justify-content: center;
     }
 
     .tech-icons {
-        justify-content: center; /* Centrar iconos */
+        justify-content: center;
     }
 
-    /* --- SECCIONES GENERALES --- */
+    
     .section-placeholder {
         padding: 0 5%;
     }
 
     .project-grid {
-        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-columns: 1fr; 
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
     }
     
-    /* Ajuste modal */
+    
     .modal-content {
         max-width: 90vw;
     }
